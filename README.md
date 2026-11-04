@@ -2,6 +2,13 @@
 
 Interactive simulator of price competition between two EV charging stations. It builds the full 8 × 8 payoff matrix from a multinomial logit demand model, finds best responses and every pure-strategy Nash equilibrium, and explains the result. Everything runs in the browser; there is no backend.
 
+## Links
+
+- [Live simulator](https://ev-charging-game-theory.vercel.app)
+- [GitHub repository](https://github.com/namitachhabra21-droid/ev-charging-game-theory)
+
+Hosted on Vercel and connected to this repository for automatic deployments when changes are pushed to `main`.
+
 ## Run it
 
 ```bash
