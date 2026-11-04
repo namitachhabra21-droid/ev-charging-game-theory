@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-plane font-sans text-ink antialiased;
+  }
+}
+
+@layer components {
+  .card {
+    @apply rounded-xl border border-hairline bg-surface p-4 shadow-sm sm:p-6;
+  }
+}
+
+input[type="range"] {
+  accent-color: #2a78d6;
+}
+
+.print-only {
+  display: none;
+}
+
+/* Print-friendly results page: drop the controls and navigation, keep results. */
+@media print {
+  @page {
+    size: A4;
+    margin: 12mm;
+  }
+  html,
+  body {
+    background: #fff !important;
+    font-size: 11px;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  span.print-only {
+    display: inline !important;
+  }
+  .card {
+    box-shadow: none !important;
+    border-color: #ccc !important;
+    break-inside: avoid-page;
+  }
+  #matrix,
+  #charts {
+    break-before: page;
+  }
+  .avoid-break {
+    break-inside: avoid;
+  }
+  .overflow-x-auto {
+    overflow: visible !important;
+  }
+  table {
+    min-width: 0 !important;
+  }
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
